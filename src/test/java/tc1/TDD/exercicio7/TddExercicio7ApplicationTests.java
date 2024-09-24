@@ -39,4 +39,12 @@ class TddExercicio7ApplicationTests {
 		assertTrue(albumPhotos.podeColarFotos(20, 15, 10, 7));
 	}
 
+	@Test
+	@DisplayName("Should verify if photos fit when rotated")
+	public void testFotosCabemRotacionadas() {
+		AlbumPhotos albumPhotos = new AlbumPhotos();
+		assertTrue(albumPhotos.podeColarFotos(10, 7, 7, 3));
+		assertTrue(albumPhotos.podeColarFotos(12, 9, 6, 6));
+	}
+
 }

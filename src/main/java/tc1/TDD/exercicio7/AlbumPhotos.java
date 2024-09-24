@@ -25,7 +25,7 @@ public class AlbumPhotos {
              return false;
          }
 
-        //Ambas normal
+        //Ambas normalm
         if ((larguraFoto * 2 <= larguraPagina && alturaFoto <= alturaPagina) ||
                 (larguraFoto <= larguraPagina && alturaFoto * 2 <= alturaPagina)) {
             return true;
