@@ -30,11 +30,13 @@ class TddExercicio7ApplicationTests {
 	}
 
 	@Test
-	@DisplayName("Should verify if photos fit when rotated")
-	public void testFotosCabemRotacionadas() {
+	@DisplayName("Should verify edge cases for minimum and maximum dimensions")
+	public void testEdgeCases() {
 		AlbumPhotos albumPhotos = new AlbumPhotos();
-		assertTrue(albumPhotos.podeColarFotos(10, 7, 7, 3));
-		assertTrue(albumPhotos.podeColarFotos(12, 9, 6, 6));
+		assertFalse(albumPhotos.podeColarFotos(0, 0, 0, 0));
+		assertTrue(albumPhotos.podeColarFotos(1000, 1000, 500, 500));
+		assertFalse(albumPhotos.podeColarFotos(10, 10, 9, 10));
+		assertTrue(albumPhotos.podeColarFotos(20, 15, 10, 7));
 	}
 
 }

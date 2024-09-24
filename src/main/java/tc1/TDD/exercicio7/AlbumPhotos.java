@@ -20,6 +20,11 @@ public class AlbumPhotos {
     }
 
      public boolean podeColarFotos(int larguraPagina, int alturaPagina, int larguraFoto, int alturaFoto) {
+
+         if (larguraPagina <= 0 || alturaPagina <= 0 || larguraFoto <= 0 || alturaFoto <= 0) {
+             return false;
+         }
+
         //Ambas normal
         if ((larguraFoto * 2 <= larguraPagina && alturaFoto <= alturaPagina) ||
                 (larguraFoto <= larguraPagina && alturaFoto * 2 <= alturaPagina)) {
