@@ -2,24 +2,11 @@ package tc1.TDD.exercicio7;
 import java.util.Scanner;
 
 public class AlbumPhotos {
-    public void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        int larguraPagina = scanner.nextInt();
-        int alturaPagina = scanner.nextInt();
-        int larguraFoto = scanner.nextInt();
-        int alturaFoto = scanner.nextInt();
-
-        if (podeColarFotos(larguraPagina, alturaPagina, larguraFoto, alturaFoto)) {
-            System.out.println("S");
-        } else {
-            System.out.println("N");
-        }
-
-        scanner.close();
-    }
 
      public boolean podeColarFotos(int larguraPagina, int alturaPagina, int larguraFoto, int alturaFoto) {
+
+
 
          if (larguraPagina <= 0 || alturaPagina <= 0 || larguraFoto <= 0 || alturaFoto <= 0) {
              return false;
