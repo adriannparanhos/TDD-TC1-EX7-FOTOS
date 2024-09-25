@@ -116,5 +116,31 @@ class TddExercicio7ApplicationTests {
 		assertFalse(result5);
 	}
 
+	@Test
+	@DisplayName("Should return false for negative dimensions")
+	public void testeDimensoesNegativas() {
+		AlbumPhotos albumPhotos = new AlbumPhotos();
+
+		boolean result1 = albumPhotos.podeColarFotos(-5, 5, 3, 4);
+		System.out.println(result1 ? "S" : "N");
+		assertFalse(result1);
+
+		boolean result2 = albumPhotos.podeColarFotos(5, -5, 3, 4);
+		System.out.println(result2 ? "S" : "N");
+		assertFalse(result2);
+
+		boolean result3 = albumPhotos.podeColarFotos(5, 5, -3, 4);
+		System.out.println(result3 ? "S" : "N");
+		assertFalse(result3);
+
+		boolean result4 = albumPhotos.podeColarFotos(5, 5, 3, -4);
+		System.out.println(result4 ? "S" : "N");
+		assertFalse(result4);
+
+		boolean result5 = albumPhotos.podeColarFotos(-5, -5, -3, -4);
+		System.out.println(result5 ? "S" : "N");
+		assertFalse(result5);
+	}
+
 
 }
